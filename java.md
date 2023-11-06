@@ -149,10 +149,6 @@ class 子类 extends 父类{
 
 虚方法表(在方法区中加载)：非private、非static、非final       只有父类中的虚方法才能被子类继承。
 
-### super
-
-父类中的构造方法不会被子类继承。子类中所有的构造方法默认先访问父类中的无参构造，再执行自己的(子类初始化之前，一定要调用父类构造方法，先完成父类数据空间的初始化)。
-
 ### super和this的区别(多数重名使用)：
 
 super：访问父类的变量(子类访问父类)[父类要有该变量名]。直接调用父类的方法。调用父类构造，必须放在子类构造方法的首行。
@@ -164,6 +160,91 @@ this：访问当前文件变量。调用方法先在本类找再在父类找。�
 ### 方法的重写
 
 在继承系中，子类与父类有一模一样的方法声明，就称子类的这个方法是重写的方法。在重写中最好加@Override注释，只有在虚方法表里有的才能重写。
+
+## 多态
+
+### 前提
+
+必须要有继承，方法的重写，父类引用指向子类对象
+
+### 特点
+
+同类型的对象，表现出的不同形态
+
+### 好处
+
+使用父类作为参数，可以接收所有子类对象，体现多态的扩展性与便利。
+
+### 弊端
+
+不能调用子类的特有方法。
+
+### 使用与调用
+
+父类类型 父类对象 = 子类实例;
+
+
+
+向上转型：(子转父)
+
+```java
+父类类型 父类对象 = 子类实例;
+```
+
+向下转型：(强转多的变少的，父转子)
+
+```java
+父类类型 父类对象 = 子类实例;
+子类类型 子类对象 = (子类)父类对象;
+```
+
+变量调用：编译看左，运行看左。
+
+方法调用：编译看左，运行看***右***。
+
+### instanceof关键字
+
+#### 作用
+
+用于判断b是否是a类的实例。
+
+***b instanceof a***
+
+返回值为bool类型
+
+```java
+//Animal类
+class Animal{
+	public void shout(){
+	};
+}
+//Dog类
+class Dog extends Animal{
+	public void shout(){
+	System.out.println("汪汪");
+	};
+}
+
+//Cat类
+class Cat extends Animal{
+	public void shout(){
+	System.out.println("喵喵");
+	};
+}
+
+public class Example{
+	public static void main(String[] args){
+	Animal a = new Animal();
+	Dog d = new Dog();
+	Cat c = new Cat();
+	boolean s1 = d instanceof Animal;
+	boolean s2 = c instanceof Animal;
+	boolean s3 = d instanceof Cat;
+	}
+}
+```
+
+
 
 ## 字符串
 
@@ -285,4 +366,16 @@ reverse()反转(可以用于回文判断)                     length()获取长�
 默认扩容：34(老容量*2+2)
 
 超出默认扩容则以实际容量为准
+
+## 集合
+
+### Collection接口
+
+boolean  add(n)添加一个元素    boolean addAll(集合)将指定集合添加到该集合中
+
+void clear()删除该集合的所有元素   boolean remove(n)删除指定元素  boolean removeAll(集合)删除指定集合所有元素
+
+int size()获取集合元素个数(元素长度)
+
+Object 
 
