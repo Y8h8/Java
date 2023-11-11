@@ -344,6 +344,12 @@ public class 类名 implements 接口名 {}
 public class 类名 implements 接口名1 , 接口名2 {}
 ```
 
+**注：实现类还可以在继承一个类的同时实现多个接口**
+
+```java
+public class 类名 extends 父类 implements 接口名1 , 接口名2 {}
+```
+
 
 
 ## 包
