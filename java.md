@@ -368,7 +368,7 @@ public class 类名 extends 父类 implements 接口名1 , 接口名2 {}
 
   ​			jdk8：可以定义有方法体的方法  
 
-  格式：
+  ​				格式：
 
   - public default 返回值类型 方法名(参数列表) {} 
 
@@ -386,7 +386,7 @@ public class 类名 extends 父类 implements 接口名1 , 接口名2 {}
 
   ​			jdk9：可以定义私有方法
 
-  格式：
+  ​				格式：
 
   - private 返回类型 方法名(参数列表){}
 
