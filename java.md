@@ -327,6 +327,7 @@ public interface 接口名 {}
 
 - 接口不能实例化
 - 接口与类之间是实现关系，用implements关键字表示
+- 接口里面抽象方法时候可以不需要public abstract，因为默认为此
 
 ```java
 public class 类名 implements 接口名 {}
