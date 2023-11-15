@@ -431,9 +431,23 @@ public class 类名 extends 父类 implements 接口名1 , 接口名2 {}
 
 ## 内部类
 
+意义：b类表示a类的一部分，且b类离开了a类没有意义
+
 类的内部定义的类  内部类
 
+定义内部类的类就是外部类
+
+外部类以外的就是外部其他类
+
+![image-20231115154948955](C:\Users\asus\AppData\Roaming\Typora\typora-user-images\image-20231115154948955.png)
+
+![image-20231115155135765](C:\Users\asus\AppData\Roaming\Typora\typora-user-images\image-20231115155135765.png)
+
 内部类分为：成员内部类，局部内部类，静态内部类，匿名内部类
+
+成员内部类
+
+<img src="C:\Users\asus\AppData\Roaming\Typora\typora-user-images\image-20231115160841530.png" alt="image-20231115160841530" style="zoom:50%;" />
 
 匿名内部类相当于创建对象(发生在继承或者接口中)
 
